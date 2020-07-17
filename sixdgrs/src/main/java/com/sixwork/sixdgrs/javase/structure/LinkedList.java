@@ -6,28 +6,13 @@ package com.sixwork.sixdgrs.javase.structure;
  * @time 2020年7月16日下午5:41:47
  */
 public class LinkedList {
-	
-	
-	/**
-	 * 使用内部类创建链表节点；
-	 * @author zlp
-	 * @time 2020年7月16日下午5:33:24
-	 */
-	class Node{
-		Integer data;
-		Node next = null;
-		Node(Integer data){
-			this.data = data;
-		}
-	}
-	
-	
+
+	//定义头节点
 	Node head = null;
-	
 	/**
 	 * 链表添加节点
-	 * 如果头结点指向空，则直接连在头结点后面；
-	 * 如果头结点不为空，那么需要找到链表的最后一个非空节点，并连在后面
+	 * 如果头结点指向空，则头节点指向新节点；
+	 * 如果头结点不为空，那么需要找到链表的最后一个非空节点，然后指向新节点
 	 * @author zlp
 	 * @time 2020年7月16日下午5:38:44
 	 * @param data
@@ -44,8 +29,12 @@ public class LinkedList {
 			temp.next = nextNode;
 		}
 	}
-	
+
+	/**
+	 * 打印所有节点
+	 */
 	public void printAllNodes() {
+
 		Node currentNode = head;
 		while(null!=currentNode) {
 			System.out.print(currentNode.data+" ");
@@ -64,5 +53,16 @@ public class LinkedList {
 	
 	
 }
-
+/**
+ * 创建链表节点类；
+ * @author zlp
+ * @time 2020年7月16日下午5:33:24
+ */
+class Node{
+	Integer data;
+	Node next = null;
+	Node(Integer data){
+		this.data = data;
+	}
+}
 

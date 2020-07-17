@@ -375,7 +375,7 @@ public class RSAUtil {
 				//getPublicKey(map);
 		System.out.println("private1:"+privatekey);
 		System.out.println("public1:"+publickey);
-		String str = " select COUNT(*) nums   from eds.tw_servst_nm_20200601 t  where 1 = 1";
+		String str = "{\"sql\": \"c2VsZWN0IHJlY2lkLGJpemZlZWRldGlkLGxvZ2lkLGN1c3RpZCxpbnZubyxzZXJpYWxubyxuYW1lLG9wY29kZSxwYXlmZWVzLHBheXdheSxmZWVjb2RlLHJmZWVjb2RlLGlmZWVjb2RlLG9wdGltZSBhcyBwYXl0aW1lLGZlZWtpbmQsc2NvcGV0eXBlLG1hcmtubyxiaXp0aW1lIGFzIGxvZ29wdGltZSxiaXpvcGVyaWQgYXMgb3BvcGVyLG9wZXJpZCBhcyBwYXlvcGVyLGJpemRlcHRpZCBhcyBvcGRlcHQsZGVwdGlkIGFzIHBheWRlcHQscGlkLHNhbGVzcGtnaWQsc2VydmlkLGRldm5hbWUsYml6YXJlYWlkIGFzIGFyZWFpZCxhcmVhaWQgYXMgdXNlcmFyZWFpZCxwYXRjaGlkLHBlcm1hcmssbG9naWNkZXZubyBhcyBjbWFjY3RubyxncmlkaWQsd2hsYWRkciBhcyBhZGRyZXNzIGZyb20gdmlld19iaXpfZGF0YV8yMDIwIHdoZXJlIDE9MSBBTkQgb3B0aW1lID49JzIwMjAtMDUtMTFUMDA6MDA6MDAnIEFORCBvcHRpbWUgPD0nMjAyMC0wNS0xMVQwOTowMDowMCcgIzk2I1BMQUNFIzk2Iw==\", \"alias\": \"ret1\", \"field\": \"recid\", \"queMethod\": \"QUERY_ESTEST\", \"pageid\": 1, \"pagesize\": 10, \"synMode\":\"N\"}";
 		byte[] data1 = encryptByPublicKey(str.getBytes(),publickey);
 		
 		String message = new String(Base64.encodeBase64(data1), RSAUtil.CHARSET);

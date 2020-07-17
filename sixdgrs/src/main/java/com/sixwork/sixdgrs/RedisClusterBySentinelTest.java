@@ -82,7 +82,8 @@ public class RedisClusterBySentinelTest {
 		
 		// 利用获取的jedisCluster可以进行jedis的所有操作
 		//System.out.println(jedisCluster.set("name1", "beyond"));
-		System.out.println(jedisCluster.get("name1"));
+		
+		System.out.println(jedisCluster.get("QUERY_ESTEST_304708465"));
 		System.out.println(jedisCluster.get("name"));
 		System.out.println(jedisCluster.get("age"));
 		// 归还连接
