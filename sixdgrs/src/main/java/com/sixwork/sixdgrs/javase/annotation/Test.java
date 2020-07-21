@@ -1,6 +1,5 @@
 package com.sixwork.sixdgrs.javase.annotation;
 
-import jdk.internal.jline.internal.TestAccessible;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

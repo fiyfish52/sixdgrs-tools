@@ -26,7 +26,7 @@ public class Polymorphic {
 
     public static void main(String[] args) {
         Polymorphic b = new Sub();
-
+Show s = new Show();
 //        执行 Base b = new Sub();时由于多态 b编译时表现为Base类特性，运行时表现为Sub类特性，
 //        Base b = new Sub()；不管是哪种状态都会调用Base构造器执行 callName()方法；
 //        执行方法时，由于多台表现为子类特性，所以会先在子类是否有 callName()；
