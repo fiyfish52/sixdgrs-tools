@@ -26,12 +26,12 @@ public class ExportProductThread extends Thread {
                 }
                 if (futureResult.isDone()) {
                     // 如果队列已满，生产者休眠
-                    if (queue.remainingCapacity() < 1) {
-                        System.out.println("睡眠"+queue.size());
-                        //Thread.sleep(2000);
-
-                        continue;
-                    }
+//                    if (queue.remainingCapacity() < 1) {
+//                        System.out.println("睡眠"+queue.size());
+//                        //Thread.sleep(2000);
+//
+//                        continue;
+//                    }
                     List<String> str = futureResult.get();
                     // 将数据放入阻塞队列
                     queue.put(str);

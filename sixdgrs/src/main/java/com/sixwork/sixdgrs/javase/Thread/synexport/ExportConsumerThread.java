@@ -49,7 +49,7 @@ public class ExportConsumerThread extends Thread{
     public void run(){
         try {
             while (true) {
-               // sleep(500000);
+                sleep(5000000);
                 if (count >= total) {
                     csvWriter.close();
                     break;

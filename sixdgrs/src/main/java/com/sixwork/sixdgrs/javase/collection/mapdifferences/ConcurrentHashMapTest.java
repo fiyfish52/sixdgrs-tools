@@ -5,5 +5,5 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ConcurrentHashMapTest {
 
-    Map map = new ConcurrentHashMap<>();
+    Map map = new ConcurrentHashMap();
 }

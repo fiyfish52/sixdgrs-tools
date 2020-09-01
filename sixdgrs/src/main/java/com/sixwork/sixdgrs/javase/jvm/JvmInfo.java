@@ -627,9 +627,14 @@ public class JvmInfo {
                     idletime += Long.valueOf(this.substring(line, umtidx, wocidx - 1).trim()).longValue();
                     continue;
                 }
-
-                kneltime += Long.valueOf(this.substring(line, kmtidx, rocidx - 1).trim()).longValue();
-                usertime += Long.valueOf(this.substring(line, umtidx, wocidx - 1).trim()).longValue();
+                try {
+                    kneltime += Long.valueOf(this.substring(line, kmtidx, rocidx - 1).trim()).longValue();
+                    usertime += Long.valueOf(this.substring(line, umtidx, wocidx - 1).trim()).longValue();
+                }catch(NumberFormatException e){
+                    e.printStackTrace();
+                    log.info(this.substring(line, kmtidx, rocidx - 1).trim());
+                    log.info(this.substring(line, umtidx, wocidx - 1).trim());
+                }
             }
             retn[0] = idletime;
             retn[1] = kneltime + usertime;

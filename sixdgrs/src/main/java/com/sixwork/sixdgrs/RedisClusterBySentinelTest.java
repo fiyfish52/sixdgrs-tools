@@ -88,7 +88,7 @@ public class RedisClusterBySentinelTest {
 
         // 利用上面的集群节点nodes和poolConfig，创建redis集群连接池，并获取一个redis连接
 		String passWord = "e1X5wpLJ2WMgc+tTZqYT+5sMwb40Ndi+x4rYuYV9CD7Gkhs7WDNGUBVYHAsLH8VVTS5BYCXZk2abbAU4Hwi9DFIEY4m0jm4tRqo4JE5TegrI3UbeN0TEsRs4d04ifTN7yCqZvs2Io4WihWuxMILShn88gE3u0s+5le4C8U=";
-        passWord = "";
+       // passWord = "";
 		JedisCluster jedisCluster = null;
 		if(StringUtils.isBlank(passWord)) {
 			jedisCluster = new JedisCluster(nodes, poolConfig);
